@@ -1,0 +1,57 @@
+#include<stdio.h>
+int main()
+{
+	//declare the variables.
+	//row=rows of a matrix.
+	//clm=columns of a matrix.
+	int i,j,row1,clm1,row2,clm2;
+	printf("first matrix:\n");
+	printf("Enter the number of rows in first matrix:");
+	scanf("%d",&row1);
+	printf("Enter the number of columns in first matrix:");
+	scanf("%d",&clm1);
+	/*taking mtx1 as first matrix and mtx2 as second matrix*/
+	int mtx1[row1][clm1],mtx2[row2][clm2];
+	for(i=0;i<row1;i++)
+	{
+		for(j=0;j<clm1;j++)
+		{
+			printf("Enter the elements of a[%d][%d]:",i,j);
+			scanf("%d",&mtx1[i][j]);
+		}
+	}
+	printf("The matrix is:\n");
+	for(i=0;i<row1;i++)
+	{
+		for(j=0;j<clm1;j++)
+		{
+			printf("\t%d",mtx1[i][j]);	
+		}
+		printf("\n");
+	}
+
+	printf("second matrix:\n");
+	printf("Enter the number of rows in second matrix:");
+	scanf("%d",&row2);
+	printf("Enter the number of columns in second matrix:");
+	scanf("%d",&clm2);
+
+	for(i=0;i<row2;i++)
+	{
+		for(j=0;j<clm2;j++)
+		{
+			printf("Enter the elements of a[%d][%d]:",i,j);
+			scanf("%d",&mtx2[i][j]);
+		}
+	}
+	printf("The matrix is:\n");
+	for(i=0;i<row2;i++)
+	{
+		for(j=0;j<clm2;j++)
+		{
+			printf("\t%d",mtx2[i][j]);	
+		}
+		printf("\n");
+	}
+	return 0;
+}
