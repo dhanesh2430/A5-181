@@ -1,0 +1,124 @@
+#include<stdio.h>
+int main()
+{
+	//declare the variables.
+	//row=rows of a matrix.
+	//clm=columns of a matrix.
+	int i,j,row1,clm1,row2,clm2,n,k;
+	
+	printf("Enter the number of rows in  matrix:");
+	scanf("%d",&row1);
+	printf("Enter the number of columns in  matrix:");
+	scanf("%d",&clm1);
+	/*taking mtx1 as first matrix and mtx2 as second matrix & sum for addition*/
+	int mtx1[row1][clm1],mtx2[row1][clm1],pro[row1][clm1];
+	for(i=0;i<row1;i++)
+	{
+		for(j=0;j<clm1;j++)
+		{
+			printf("Enter the elements of a first matrix [%d][%d]:",i+1,j+1);
+			scanf("%d",&mtx1[i][j]);
+		}
+	}
+	printf("The first matrix is:\n");
+	for(i=0;i<row1;i++)
+	{
+		for(j=0;j<clm1;j++)
+		{
+			printf("\t%d",mtx1[i][j]);	
+		}
+		printf("\n");
+	}
+
+
+	for(i=0;i<row1;i++)
+	{
+		for(j=0;j<clm1;j++)
+		{
+			printf("Enter the elements of a second matrix [%d][%d]:",i+1,j+1);
+			scanf("%d",&mtx2[i][j]);
+		}
+	}
+	printf("The second matrix is:\n");
+	for(i=0;i<row1;i++)
+	{
+		for(j=0;j<clm1;j++)
+		{
+			printf("\t%d",mtx2[i][j]);	
+		}
+		printf("\n");
+	}
+		printf("\n");
+	/*entering into switch cases for add,sub,multiply the two matrix*/
+	printf("choice an option to do the process for the two matrices.\n");
+	printf("1.addition\n2.subtrction\n3,multiplication\n");
+	scanf("%d",&n);
+		switch(n){
+		
+		case 1:
+	    printf("addtion of two matrices :\n");
+	for(i=0;i<row1;i++)
+	{
+		for(j=0;j<clm1;j++)
+		{
+		pro[i][j] = mtx1[i][j] + mtx2[i][j];
+		}
+	}
+	for(i=0;i<row1;i++)
+	{
+		for(j=0;j<clm1;j++)
+		{
+			printf("\t%d",pro[i][j]);
+			
+		}
+		printf("\n");
+	}
+	break;
+	case 2:
+	printf("subtraction of two matrices :\n");
+	for(i=0;i<row1;i++)
+	{
+		for(j=0;j<clm1;j++)
+		{
+		pro[i][j] = mtx1[i][j] - mtx2[i][j];
+		}
+	}
+	for(i=0;i<row1;i++)
+	{
+		for(j=0;j<clm1;j++)
+		{
+			printf("\t%d",pro[i][j]);
+			
+		}
+		printf("\n");
+	}
+	break;
+	case 3:
+	printf("multiplication of two matrices :\n");
+	for(i=0;i<row1;i++)
+	{
+		for(j=0;j<clm1;j++)
+		{
+			pro[i][j]=0;
+			for(k=0;k<clm1;k++) 
+			{
+			
+		pro[i][j] += mtx1[i][k] * mtx2[k][j];
+	    	}
+		}
+	}
+	for(i=0;i<row1;i++)
+	{
+		for(j=0;j<clm1;j++)
+		{
+			printf("\t%d",pro[i][j]);
+			
+		}
+		printf("\n");
+	}
+	break;
+	
+}
+	return 0;
+	
+}
